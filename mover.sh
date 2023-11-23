@@ -11,5 +11,6 @@ do
   # crear carpeta con fecha actual
   [ -d $fecha ] || mkdir $fecha
   # sincronizar los archivos carpeta base-datos
-  rsync -r $ruta/base-datos/$archivo /home/devops/$fecha/
+  #rsync -r $ruta/base-datos/$archivo $ruta/$fecha/
+  mv $ruta/base-datos/$archivo $ruta/$fecha
 done
