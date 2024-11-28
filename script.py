@@ -28,7 +28,7 @@ def process_pipeline():
 
     r = exec( [ "git", "clone", REPO, "dir1" ] )
 
-    r = exec( [ "kubectl", "apply", "-f", "kubernetes/sampleapp.yaml" ] )
+    r = exec( [ "kubectl", "apply", "-f", "sampleapp.yml" ] )
 
     #r = exec( [ "kubectl", "cp", "script.py", "nginx-statefulset-0:/usr/share/nginx/html" ] )
     #r = exec( [ "/bin/bash", "-c" ,"kubectl exec -it pod/nginx-statefulset-0 -- /bin/sh -c 'date > /usr/share/nginx/html/index.html'" ] )
