@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -G $1 ];
+if [ -d $1 ];
 then
-echo "-G:grupo iual fichero"
+echo "-d:Es un directorio"
 fi
