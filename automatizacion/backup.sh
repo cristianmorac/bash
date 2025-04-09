@@ -28,8 +28,11 @@ for file in $(ls | grep -E "\.${extension}");
 do
   # sincronizar los archivos en la carpeta backup
   rsync $file $fecha
-  # eliminar el fihero
-  rm $file
 done
 
-echo ls | grep -E "\.${extension}"
+# eliminar ficheros terminada en una extensión en la carpeta actual
+# limita la busqueda en el directorio actual -maxdepth 1
+# find . -maxdepth 1 -type f -name "*.${extension}" -exec rm {} \;
+
+# eliminar el fihero de mas de una semana
+find . -type f -mtime +7 -exec rm {} \;
